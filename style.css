@@ -1,74 +1,87 @@
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 *:not(i) {
     font-family: "Poppins", sans-serif;
 }
-h1{
-    position: absolute;
-    top:9%;
-    left:42%;
+
+h1 {
     font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
 }
+
 body {
-    background-image:url('bg.webp');
+    background-image: url('bg.webp');
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
 }
+
 .container {
     background-color: #c7e2f469;
     width: 90vmin;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+    margin: 0 auto;
     padding: 70px 35px;
     border-radius: 10px;
     box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
 }
+
 .search-box {
     width: 80%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
 }
+
 .search-box input {
     padding: 5px;
-    width: 70%;
+    width: 100%;
+    margin-bottom: 10px;
     border: 1.5px solid black;
     outline: none;
-   /* border-bottom: 3px solid #ae9caf;*/
     font-size: 15px;
-    border-radius:8px ;
-}
-.search-box button {
-    padding: 15px 0;
-    width: 25%;
-    background-color: darkgrey;
-    border: 1.75px solid ;
-    outline: none;
-    color:black;
     border-radius: 8px;
-    cursor:pointer; 
-    font-size: 18px;
-    box-shadow: 2cm;    
 }
-.search-box button:hover{
+
+.search-box button {
+    /* padding: 15px 0; */
+    width: 50%;
+    background-color: darkgrey;
+    border: 1.75px solid;
+    outline: none;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 2cm;
+}
+
+.search-box button:hover {
     font-size: 20px;
 }
+
 .result {
     position: relative;
 }
+
 .result h3 {
     font-size: 30px;
     color: black;
 }
+
 .result .word {
     display: flex;
     justify-content: space-between;
     margin-top: 70px;
 }
+
 .result button {
     background-color: transparent;
     color: black;
@@ -77,6 +90,7 @@ body {
     font-size: 18px;
     cursor: pointer;
 }
+
 .result .details {
     display: flex;
     gap: 10px;
@@ -84,9 +98,11 @@ body {
     margin: 5px 0 20px 0;
     font-size: 15px;
 }
+
 .word-meaning {
     color: black;
 }
+
 .word-example {
     color: black;
     font-style: italic;
@@ -94,89 +110,42 @@ body {
     padding-left: 20px;
     margin-top: 30px;
 }
+
 .error {
     margin-top: 80px;
     text-align: center;
 }
-@media (min-width: 576px) {
+
+/* Add media query for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 40px;
     }
 
     .container {
-        max-width: 80%;
+        width: 90%;
+        padding: 50px 25px;
     }
 
     .search-box {
-        flex-wrap: nowrap;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
 
     .search-box input {
-        flex: 2;
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .search-box button {
-        flex: 1;
-        margin-top: 0;
-    }
-
-    .result h3 {
-        font-size: 1.8rem;
+        width: 50%;
     }
 }
 
-@media (min-width: 768px) {
-    h1 {
-        font-size: 3rem;
-    }
-
+/* Add media query for larger screens (min-width: 769px) */
+@media (min-width: 769px) {
     .container {
-        max-width: 70%;
-    }
-
-    .search-box input {
-        font-size: 1.2rem;
-    }
-
-    .search-box button {
-        font-size: 1.2rem;
-    }
-
-    .result h3 {
-        font-size: 2rem;
-    }
-
-    .result .details {
-        font-size: 1.2rem;
-    }
-
-    .word-example {
-        font-size: 1.2rem;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 60%;
-    }
-
-    .search-box input {
-        font-size: 1.3rem;
-    }
-
-    .search-box button {
-        font-size: 1.3rem;
-    }
-
-    .result h3 {
-        font-size: 2.5rem;
-    }
-
-    .result .details {
-        font-size: 1.3rem;
-    }
-
-    .word-example {
-        font-size: 1.3rem;
+        width: 50vmin;
     }
 }
