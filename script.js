@@ -61,4 +61,5 @@ function playSound() {
 function clearResult() {
     result.innerHTML = '';
     document.getElementById("inp-word").value = ''; 
+    location.reload();
 }
